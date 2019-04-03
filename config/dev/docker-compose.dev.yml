@@ -19,3 +19,4 @@ services:
       - ./src:/home/vision-reproml/src
       - ./data:/home/vision-reproml/data
       - ./notebooks:/home/vision-reproml/notebooks
+      - ./models:/home/vision-reproml/models
