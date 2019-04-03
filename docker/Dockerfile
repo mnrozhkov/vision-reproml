@@ -6,6 +6,8 @@ RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 
 RUN apt update && apt install -y libglib2.0-0 libsm6 libxext6 libxrender1
 
+RUN apt-get install -y unzip
+
 RUN useradd -m user -u 1000
 RUN echo 'user:user' | chpasswd user
 
