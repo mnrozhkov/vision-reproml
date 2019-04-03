@@ -16,6 +16,7 @@ services:
       LANG: 'C.UTF-8'
       PROJECT_NAME: 'vision-reproml'
     volumes:
+      - ./src:/home/vision-reproml/src
       - ./data:/home/vision-reproml/data
       - ./notebooks:/home/vision-reproml/notebooks
       - $PYTORCH_MODELS_FOLDER:/home/user/.torch/models
