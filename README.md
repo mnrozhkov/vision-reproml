@@ -71,6 +71,8 @@ this pipeline:
 1) creates configs `prepare_dataset_config.yml`, `train_model_config.yml`, `evaluate_model_config.yml`
 2) generate stage file `pipeline_prepare_configs.dvc`
 
+To reproduce: `dvc repro pipeline_prepare_configs.dvc`
+
         
 * pipeline_prepare_dataset.dvc
 
@@ -88,7 +90,9 @@ this pipeline:
 
 1) unzip dataset archive, split dataset on train/val/test sets and create sample (short version) dataset
 2) generate stage file `pipeline_prepare_dataset.dvc`        
-        
+
+To reproduce: `dvc repro pipeline_prepare_dataset.dvc`
+
 
 * pipeline_train_model.dvc
 
@@ -110,6 +114,8 @@ this pipeline:
 2) save training report
 3) generate stage file `pipeline_train_model.dvc`        
 
+To reproduce: `dvc repro pipeline_train_model.dvc`
+
 
 * pipeline_evaluate_model.dvc
 
@@ -127,3 +133,5 @@ this pipeline:
 1) evaluate model
 2) save evaluating report
 3) generate stage file `pipeline_evaluate_model.dvc`
+
+To reproduce: `dvc repro pipeline_evaluate_model.dvc`
