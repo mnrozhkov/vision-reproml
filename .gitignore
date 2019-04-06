@@ -1,5 +1,7 @@
 .idea/
 /data/*
+/experiments/*
+/mlruns/*
 /models/*
 */.ipynb_checkpoints/*
 
