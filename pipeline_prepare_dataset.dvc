@@ -1,0 +1,25 @@
+cmd: python src/pipelines/prepare_dataset.py --config=experiments/prepare_dataset_config.yml
+deps:
+- md5: 60d6d41b52005dcf3e921cdbf146f455
+  path: src/pipelines/prepare_dataset.py
+- md5: 9ebd494a9deb8aa60afe6bc46d1a7ed2
+  path: experiments/prepare_dataset_config.yml
+md5: e17d7519108ecc07dad249e55ae3700b
+outs:
+- cache: false
+  md5: b7177e8f1990f4af5bc7730724244543.dir
+  metric: false
+  path: data/train
+- cache: false
+  md5: 8a71ae108f635cd3fbff7fc1695d99b3.dir
+  metric: false
+  path: data/val
+- cache: false
+  md5: 8d0771584cb127744546eee8eefd66b5.dir
+  metric: false
+  path: data/test
+- cache: false
+  md5: 0d9dc08b9b473e43e378b2003ee290d9.dir
+  metric: false
+  path: data/sample
+wdir: .

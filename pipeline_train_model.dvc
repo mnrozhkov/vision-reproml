@@ -1,0 +1,25 @@
+cmd: python src/pipelines/train_model.py --config=experiments/train_model_config.yml
+deps:
+- md5: 1af977b614b88f4ea69ead1aa4bfd1a5
+  path: src/pipelines/train_model.py
+- md5: 0830a6a8aca0d85093534038b7cbf9f9
+  path: experiments/train_model_config.yml
+- md5: b7177e8f1990f4af5bc7730724244543.dir
+  path: data/train
+- md5: 8a71ae108f635cd3fbff7fc1695d99b3.dir
+  path: data/val
+- md5: 8d0771584cb127744546eee8eefd66b5.dir
+  path: data/test
+- md5: 0d9dc08b9b473e43e378b2003ee290d9.dir
+  path: data/sample
+md5: 620abe4889643fc5fcd7b77323450e36
+outs:
+- cache: true
+  md5: e524dafac0278aa25520ba524d16b105
+  metric: false
+  path: models/model.pth
+- cache: true
+  md5: f0bcbcf8b9cb64fbc64c5b4e3445f3da
+  metric: false
+  path: experiments/model.pth_train_report.json
+wdir: .

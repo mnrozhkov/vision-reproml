@@ -1,0 +1,21 @@
+cmd: python src/pipelines/prepare_configs.py --config=config/pipeline_config.yml
+deps:
+- md5: e80af3632f244369ab75ae10017e0e72
+  path: src/pipelines/prepare_configs.py
+- md5: 7e413faf3057876ef8c9aa51c2477e61
+  path: config/pipeline_config.yml
+md5: 687f75a107c73f8dd9054fa2557e452a
+outs:
+- cache: true
+  md5: 9ebd494a9deb8aa60afe6bc46d1a7ed2
+  metric: false
+  path: experiments/prepare_dataset_config.yml
+- cache: true
+  md5: 0830a6a8aca0d85093534038b7cbf9f9
+  metric: false
+  path: experiments/train_model_config.yml
+- cache: true
+  md5: 5b47fa702f3c612213b1903831da29fc
+  metric: false
+  path: experiments/evaluate_model_config.yml
+wdir: .

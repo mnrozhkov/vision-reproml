@@ -1,1 +1,6 @@
 !.gitignore
+/prepare_dataset_config.yml
+/train_model_config.yml
+/evaluate_model_config.yml
+/model.pth_train_report.json
+/model.pth_evaluate_report.json

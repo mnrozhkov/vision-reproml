@@ -1,0 +1,15 @@
+cmd: python src/pipelines/evaluate_model.py --config=experiments/evaluate_model_config.yml
+deps:
+- md5: 846933c00dec94abba0a5aebae894e12
+  path: src/pipelines/evaluate_model.py
+- md5: 5b47fa702f3c612213b1903831da29fc
+  path: experiments/evaluate_model_config.yml
+- md5: e524dafac0278aa25520ba524d16b105
+  path: models/model.pth
+md5: d127e1aec07e710efd103acdca3ddc0c
+outs:
+- cache: true
+  md5: b62e22a11ad5fac4f5b0784e590179a6
+  metric: false
+  path: experiments/model.pth_evaluate_report.json
+wdir: .
