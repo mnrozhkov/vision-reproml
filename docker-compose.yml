@@ -12,10 +12,13 @@ services:
       LANG: 'C.UTF-8'
       PROJECT_NAME: 'vision-reproml'
     volumes:
-      - ./src:/home/vision-reproml/src
+      - ./:/home/vision-reproml
       - ./config:/home/vision-reproml/config
       - ./data:/home/vision-reproml/data
+      - ./.dvc:/home/vision-reproml/.dvc
       - ./experiments:/home/vision-reproml/experiments
       - ./mlruns:/home/vision-reproml/mlruns
-      - ./notebooks:/home/vision-reproml/notebooks
       - ./models:/home/vision-reproml/models
+      - ./notebooks:/home/vision-reproml/notebooks
+      - ./src:/home/vision-reproml/src
+
