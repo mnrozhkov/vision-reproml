@@ -1,0 +1,41 @@
+project: 7labs.ru/vision
+name: vision
+tags: [solution-0-prototype, dev]
+
+random_seed: 42
+
+dataset:
+  data_dir: data
+  dataset_archive_name: dogs-vs-cats.zip
+  dataset_dir: data/sample
+  sample:
+    folder: data/sample
+    train_size: 100
+    val_size: 20
+    test_size: 20
+
+
+model:
+  model_name: model.pth
+  models_folder: models
+  lr: 0.001
+  momentum: 0.9
+  step_size: 7
+  gamma: 0.1
+
+
+train:
+  batch_size: 100
+  epochs: 3
+
+
+evaluate:
+  batch_size: 100
+
+
+report:
+  reports_folder: experiments
+
+
+split_config:
+  folder: experiments
