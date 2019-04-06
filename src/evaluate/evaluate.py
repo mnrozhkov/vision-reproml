@@ -18,6 +18,8 @@ def predict_image(model, image: torch.Tensor, device) -> int:
 
 def evaluate(model, dataloader, device):
 
+    model.eval()
+
     y_pred = []
     y_true = []
     # read by batches
