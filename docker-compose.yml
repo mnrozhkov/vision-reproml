@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  vision-reproml:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: vision-reproml:latest
+    environment:
+      PYTHONPATH: '/home/vision-reproml'
+      LANG: 'C.UTF-8'
+      PROJECT_NAME: 'vision-reproml'
+    volumes:
+      - ./src:/home/vision-reproml/src
+      - ./config:/home/vision-reproml/config
+      - ./data:/home/vision-reproml/data
+      - ./experiments:/home/vision-reproml/experiments
+      - ./mlruns:/home/vision-reproml/mlruns
+      - ./notebooks:/home/vision-reproml/notebooks
+      - ./models:/home/vision-reproml/models
