@@ -4,22 +4,13 @@ import time
 import torch
 
 
-def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_sizes, device, num_epochs=2, checkpoint=None):
+def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_sizes, device, num_epochs=2):
 
     since = time.time()
 
-    if checkpoint is None:
-        best_model_wts = copy.deepcopy(model.state_dict())
-        best_loss = math.inf
-        best_acc = 0.
-    else:
-        print('Val loss: {}, Val accuracy: {}'.format(checkpoint["best_val_loss"], checkpoint["best_val_accuracy"]))
-        model.load_state_dict(checkpoint['model_state_dict'])
-        best_model_wts = copy.deepcopy(model.state_dict())
-        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
-        best_loss = checkpoint['best_val_loss']
-        best_acc = checkpoint['best_val_accuracy']
+    best_loss = math.inf
+    best_acc = 0.0
+    best_model_wts = copy.deepcopy(model.state_dict())
 
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
